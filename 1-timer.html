@@ -5,26 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
-    <link rel="stylesheet" href="iziToast.min.css" />
     
     
     <title>Timer page</title>
     <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-ec808ebb.js">
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-c2cf587c.js">
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-f90250d9.css">
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-c9db6b34.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-651d7991.js">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-80d0dc0f.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/1-timer-8f0cbc81.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-9e6c25f9.css">
   </head>
   <body>
     <section>
       <a href="./index.html">Go to home</a>
       <h1>Welcome to Timer page</h1>
-
-      <input type="text" id="datetime-picker" />
-      <button type="button" data-start>Start</button>
+      <div class="interaction-wrapper">
+        <input type="text" id="datetime-picker" />
+        <button type="button" data-start>Start</button>
+      </div>
 
       <div class="timer">
         <div class="field">
@@ -46,7 +51,6 @@
       </div>
     </section>
 
-    <script src="iziToast.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     
   </body>
