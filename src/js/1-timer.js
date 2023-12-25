@@ -1,6 +1,7 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const options = {
   enableTime: true,
@@ -53,7 +54,7 @@ startBtn.addEventListener('click', () => {
 
   const currentTime = new Date().getTime();
   const selectedTime = userSelectedDate.getTime();
-  let countdownInterval = currentTime - selectedTime;
+  let countdownInterval = selectedTime - currentTime;
 
   const time = convertMs(countdownInterval);
   updateTimerDisplay(time);
@@ -65,6 +66,7 @@ startBtn.addEventListener('click', () => {
 
     if (countdownInterval <= 1000) {
       clearInterval(intervalId);
+      startBtn.disabled = false;
     }
   }, 1000);
 
