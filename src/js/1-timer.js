@@ -40,6 +40,7 @@ const minutesTimer = document.querySelector('[data-minutes]');
 const secondsTimer = document.querySelector('[data-seconds]');
 
 let userSelectedDate = '';
+let isTimerActive = false;
 
 const datePicker = flatpickr(input, options);
 
@@ -50,7 +51,12 @@ input.addEventListener('focus', () => {
 let intervalId;
 
 startBtn.addEventListener('click', () => {
+  if (isTimerActive) {
+    return;
+  }
+
   startBtn.disabled = true;
+  isTimerActive = true;
 
   const currentTime = new Date().getTime();
   const selectedTime = userSelectedDate.getTime();
@@ -67,6 +73,7 @@ startBtn.addEventListener('click', () => {
     if (countdownInterval <= 1000) {
       clearInterval(intervalId);
       startBtn.disabled = false;
+      isTimerActive = false;
     }
   }, 1000);
 
