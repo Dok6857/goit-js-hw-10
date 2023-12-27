@@ -51,7 +51,7 @@ input.addEventListener('focus', () => {
 let intervalId;
 
 startBtn.addEventListener('click', () => {
-  if (isTimerActive) {
+  if (isTimerActive || userSelectedDate < new Date()) {
     return;
   }
 
